@@ -8,7 +8,8 @@ RUN     yum install -y npm
 
 # Bundle app source
 #COPY ./src /src
-ONBUILD ADD ./src /src
+ONBUILD COPY ./src /src
+
 # Install app dependencies
 RUN cd /src; npm install
 
